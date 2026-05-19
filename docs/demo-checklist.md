@@ -4,13 +4,12 @@
 
 Recommended screenshots:
 
-1. Dashboard
-2. Lesson overview or detail page
-3. Learning statistics
-4. Learning settings
-5. Admin question editor
-6. User management
-7. Account / GDPR area with demo data only
+1. `screenshots/01-login.png`
+2. `screenshots/02-dashboard.png`
+3. `screenshots/03-combined-learning.png`
+4. `screenshots/04-learning-statistics.png`
+5. `screenshots/05-learning-settings.png`
+6. `screenshots/06-admin-cockpit.png`
 
 Place screenshots in `screenshots/`.
 
@@ -43,4 +42,3 @@ Do not publish:
 - private source code
 - real user data
 - full admin access
-

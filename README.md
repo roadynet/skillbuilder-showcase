@@ -58,6 +58,20 @@ Core product areas:
 - [Demo checklist](docs/demo-checklist.md)
 - [Representative examples](examples/)
 
+## Screenshots
+
+![Login](screenshots/01-login.png)
+
+![Dashboard](screenshots/02-dashboard.png)
+
+![Combined learning](screenshots/03-combined-learning.png)
+
+![Learning statistics](screenshots/04-learning-statistics.png)
+
+![Learning settings](screenshots/05-learning-settings.png)
+
+![Admin cockpit](screenshots/06-admin-cockpit.png)
+
 ## What Is Not Included
 
 This repository does not include:
@@ -96,4 +110,3 @@ Additional checks performed:
 ## Portfolio Positioning
 
 SkillBuilder demonstrates product-focused Symfony development: domain modeling, service-layer architecture, role-based access, privacy-aware workflows, testable learning logic, UI polish, and production operations.
-
