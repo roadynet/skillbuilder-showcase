@@ -56,7 +56,16 @@ Core product areas:
 - [Quality and test report](docs/quality-report.md)
 - [Interview summary](docs/interview-summary.md)
 - [Demo checklist](docs/demo-checklist.md)
+- [Code walkthrough](docs/code-walkthrough.md)
 - [Representative examples](examples/)
+
+Representative code examples:
+
+- [Learning scheduler](examples/learning-scheduler/LearningSchedulerExample.php)
+- [Section code parser](examples/section-code/SectionCodeServiceExample.php)
+- [Next due question selection](examples/question-selection/NextDueQuestionServiceExample.php)
+- [Security role check](examples/security/RoleCheckExample.php)
+- [Example tests](examples/tests/)
 
 ## Screenshots
 
