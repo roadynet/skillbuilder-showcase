@@ -31,6 +31,7 @@ Main capabilities:
 - personal learning settings
 - progress and learning statistics
 - admin question editing
+- Shopware export bridge for portfolio demo products
 - user and role management
 - GDPR data export request/download flow
 - automated service-level tests
@@ -56,6 +57,7 @@ I worked across product, backend, UI, testing, security, and deployment:
 - Twig UI with reusable design patterns
 - role-aware admin/user navigation
 - secure GDPR export context
+- API-based Shopware integration that maps lessons to products and sections to categories
 - migration hygiene checks
 - PHPUnit tests and Symfony lint checks
 
@@ -79,4 +81,4 @@ Live smoke checks: OK
 - Legacy access rules can quietly distort statistics and should be removed decisively.
 - Service-level tests are the fastest way to protect learning logic.
 - Production readiness includes deployment, permissions, privacy, and operational checks.
-
+- A portfolio demo becomes much stronger when internal admin workflows create visible output in a second real system.

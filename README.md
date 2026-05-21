@@ -33,6 +33,7 @@ Core product areas:
 - user-specific learning settings
 - learning statistics and reporting
 - admin question editing
+- Shopware demo bridge for exporting learning content into commerce products
 - user and role management
 - GDPR data export workflow
 - PHPUnit tests for core learning behavior
@@ -57,6 +58,7 @@ Core product areas:
 - [Interview summary](docs/interview-summary.md)
 - [Demo checklist](docs/demo-checklist.md)
 - [Code walkthrough](docs/code-walkthrough.md)
+- [Shopware bridge](docs/shopware-bridge.md)
 - [Representative examples](examples/)
 
 Representative code examples:

@@ -12,8 +12,10 @@ flowchart TD
     Services --> Scheduler["Learning Scheduler"]
     Services --> Stats["Statistics Builder"]
     Services --> Imports["Import Workflows"]
+    Services --> Shopware["Shopware API Bridge"]
     Services --> GDPR["GDPR Export Flow"]
     Services --> Doctrine["Doctrine ORM"]
+    Shopware --> Storefront["Shopware Storefront"]
     Doctrine --> DB["MySQL / MariaDB"]
 ```
 
@@ -35,8 +37,35 @@ Representative service responsibilities:
 - select due questions
 - calculate progress and stability
 - import structured content
+- export demo commerce data to Shopware
 - export user data with the correct request owner
 - log sensitive GDPR access
+
+## Shopware Demo Bridge
+
+The portfolio demo includes an admin-only integration path:
+
+```mermaid
+sequenceDiagram
+    actor Admin
+    participant SkillBuilder
+    participant Importer as ShopwareDemoProductImporter
+    participant API as Shopware Admin API
+    participant Storefront as Shopware Storefront
+
+    Admin->>SkillBuilder: Click "Shopware Demo-Produkte"
+    SkillBuilder->>Importer: Load lessons and sections
+    Importer->>API: Upsert categories for lessons/sections
+    Importer->>API: Create or update products
+    API->>Storefront: Products become visible in shop categories
+```
+
+Mapping:
+
+- Lesson becomes a Shopware product
+- Lesson section becomes a Shopware category
+- Product numbers use a stable `SB-COURSE-*` format
+- Repeated imports update existing products instead of duplicating them
 
 ## Security Model
 
@@ -47,4 +76,3 @@ The private application uses:
 - explicit admin-only routes
 - access checks before sensitive workflows
 - safe GDPR export ownership
-
