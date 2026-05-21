@@ -4,7 +4,7 @@
 
 SkillBuilder is a private Symfony learning platform built to manage structured course content, adaptive practice, user progress, and admin workflows.
 
-The project was developed as a production-style application rather than a static demo. It includes authentication, authorization, content workflows, learning logic, statistics, GDPR-oriented data export, deployment, and automated tests.
+The project was developed as a production-style application rather than a static demo. It includes authentication, authorization, content workflows, learning logic, statistics, GDPR-oriented data export, deployment, automated tests, and a real Shopware Admin API synchronization workflow.
 
 ## Problem
 
@@ -18,6 +18,7 @@ The product needed to answer these questions:
 - Can admins edit questions without losing context?
 - Can users export their personal data safely?
 - Can the system be operated and tested reliably?
+- Can published learning content be synchronized into a commerce storefront without manual product maintenance?
 
 ## Solution
 
@@ -31,7 +32,7 @@ Main capabilities:
 - personal learning settings
 - progress and learning statistics
 - admin question editing
-- Shopware export bridge for portfolio demo products
+- Shopware Admin API bridge for synchronizing published lessons into products
 - user and role management
 - GDPR data export request/download flow
 - automated service-level tests
@@ -57,7 +58,8 @@ I worked across product, backend, UI, testing, security, and deployment:
 - Twig UI with reusable design patterns
 - role-aware admin/user navigation
 - secure GDPR export context
-- API-based Shopware integration that maps lessons to products and sections to categories
+- API-based Shopware integration that maps published lessons to products and sections to categories
+- product activation/deactivation based on SkillBuilder publication status
 - migration hygiene checks
 - PHPUnit tests and Symfony lint checks
 
@@ -82,3 +84,4 @@ Live smoke checks: OK
 - Service-level tests are the fastest way to protect learning logic.
 - Production readiness includes deployment, permissions, privacy, and operational checks.
 - A portfolio demo becomes much stronger when internal admin workflows create visible output in a second real system.
+- Integration work is easier to explain when a recruiter can see the admin button, the API mapping, and the generated storefront result.

@@ -22,7 +22,7 @@ Demo credentials are not published in this repository. They can be provided duri
 
 ## Project Summary
 
-SkillBuilder is a learning platform built with PHP/Symfony. It combines structured lessons, adaptive question practice, progress tracking, personal learning settings, admin workflows, GDPR-oriented export features, and production deployment.
+SkillBuilder is a learning platform built with PHP/Symfony. It combines structured lessons, adaptive question practice, progress tracking, personal learning settings, admin workflows, GDPR-oriented export features, production deployment, and a real Shopware Admin API synchronization workflow.
 
 Core product areas:
 
@@ -33,7 +33,7 @@ Core product areas:
 - user-specific learning settings
 - learning statistics and reporting
 - admin question editing
-- Shopware demo bridge for exporting learning content into commerce products
+- Shopware Admin API bridge for synchronizing published lessons into commerce products
 - user and role management
 - GDPR data export workflow
 - PHPUnit tests for core learning behavior
@@ -83,6 +83,8 @@ Representative code examples:
 
 ![Admin cockpit](screenshots/06-admin-cockpit.png)
 
+![Admin Shopware import](screenshots/07-admin-shopware-import.png)
+
 ## What Is Not Included
 
 This repository does not include:
@@ -120,4 +122,4 @@ Additional checks performed:
 
 ## Portfolio Positioning
 
-SkillBuilder demonstrates product-focused Symfony development: domain modeling, service-layer architecture, role-based access, privacy-aware workflows, testable learning logic, UI polish, and production operations.
+SkillBuilder demonstrates product-focused Symfony development: domain modeling, service-layer architecture, role-based access, privacy-aware workflows, testable learning logic, UI polish, production operations, and API-based e-commerce integration.

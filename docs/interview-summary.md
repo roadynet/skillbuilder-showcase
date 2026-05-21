@@ -2,13 +2,13 @@
 
 ## Short Version
 
-I built SkillBuilder, a Symfony-based learning platform with role-based admin workflows, adaptive learning logic, learning statistics, GDPR data export, deployment, and automated tests.
+I built SkillBuilder, a Symfony-based learning platform with role-based admin workflows, adaptive learning logic, learning statistics, GDPR data export, deployment, automated tests, and a real Shopware Admin API integration.
 
 ## Strong Interview Pitch
 
 SkillBuilder is not just a CRUD project. It models a real learning workflow: users work through lessons, answer questions, receive scheduled repetitions, and see their progress in a way they can understand. Admins can manage users and questions while role checks protect sensitive workflows.
 
-The project shows backend development, product thinking, UI improvement, security awareness, privacy workflows, testing, and production operations.
+The project shows backend development, product thinking, UI improvement, security awareness, privacy workflows, testing, production operations, and API-based e-commerce integration.
 
 ## Technical Talking Points
 
@@ -18,6 +18,8 @@ The project shows backend development, product thinking, UI improvement, securit
 - adaptive scheduling using stages, streaks, due dates, and strict mode
 - admin question editing with progress awareness
 - GDPR export workflow
+- Shopware Admin API synchronization for published lessons
+- product/category mapping across two systems
 - PHPUnit tests for core business rules
 - production smoke checks and deployment hygiene
 
@@ -28,4 +30,3 @@ The project shows backend development, product thinking, UI improvement, securit
 - seedable demo data
 - more advanced admin reporting filters
 - cleaner deployment pipeline
-

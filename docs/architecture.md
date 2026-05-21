@@ -55,17 +55,20 @@ sequenceDiagram
 
     Admin->>SkillBuilder: Click "Shopware Demo-Produkte"
     SkillBuilder->>Importer: Load lessons and sections
-    Importer->>API: Upsert categories for lessons/sections
+    Importer->>API: Upsert categories for published lessons/sections
     Importer->>API: Create or update products
+    Importer->>API: Deactivate unpublished course products
+    Importer->>API: Hide orphaned course categories
     API->>Storefront: Products become visible in shop categories
 ```
 
 Mapping:
 
-- Lesson becomes a Shopware product
+- Published lesson becomes a Shopware product
 - Lesson section becomes a Shopware category
 - Product numbers use a stable `SB-COURSE-*` format
 - Repeated imports update existing products instead of duplicating them
+- Unpublished lessons are removed from storefront visibility
 
 ## Security Model
 
