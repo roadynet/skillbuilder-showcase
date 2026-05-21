@@ -20,6 +20,8 @@ Demo URL: `https://sb.mcmonaco.de`
 
 Demo credentials are not published in this repository. They can be provided during an interview or live walkthrough.
 
+Connected Shopware demo repository: [roadynet/shopware-demo-shop](https://github.com/roadynet/shopware-demo-shop)
+
 ## Project Summary
 
 SkillBuilder is a learning platform built with PHP/Symfony. It combines structured lessons, adaptive question practice, progress tracking, personal learning settings, admin workflows, GDPR-oriented export features, production deployment, and a real Shopware Admin API synchronization workflow.
@@ -33,7 +35,7 @@ Core product areas:
 - user-specific learning settings
 - learning statistics and reporting
 - admin question editing
-- Shopware Admin API bridge for synchronizing published lessons into commerce products
+- Shopware Admin API bridge for synchronizing published lessons into commerce products, documented in the connected [Shopware demo repository](https://github.com/roadynet/shopware-demo-shop)
 - user and role management
 - GDPR data export workflow
 - PHPUnit tests for core learning behavior
