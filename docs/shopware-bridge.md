@@ -19,7 +19,8 @@ Instead of describing integration work abstractly, the admin can trigger a real 
 5. Shopware receives or updates products.
 6. Products for unpublished lessons are deactivated.
 7. Obsolete child categories from earlier demo imports are hidden.
-8. The storefront displays the synchronized SkillBuilder products.
+8. SkillBuilder stores the sync result in the admin log and status card.
+9. The storefront displays the synchronized SkillBuilder products.
 
 ## Mapping
 
@@ -30,7 +31,7 @@ Instead of describing integration work abstractly, the admin can trigger a real 
 | Lesson description | Product description |
 | Lesson ID | Stable product number |
 | Lesson status `published` | Product visibility |
-| Admin import result | Flash message |
+| Admin import result | Sync log and status card |
 
 ## Design Notes
 
@@ -40,8 +41,10 @@ Instead of describing integration work abstractly, the admin can trigger a real 
 - Product numbers are stable, using a `SB-COURSE-*` pattern.
 - Re-running the import updates existing products.
 - Products are assigned to the `SkillBuilder Kurse` shop category.
+- Lesson chapters are not synchronized as categories in this demo.
 - Obsolete child categories from earlier demo imports are hidden again.
 - Products are activated or deactivated based on SkillBuilder publication state.
+- The SkillBuilder admin dashboard shows the latest Shopware sync status.
 - Storefront styling was aligned with the SkillBuilder dashboard: navy header, blue accents, compact cards, and clear action buttons.
 
 ## Portfolio Value

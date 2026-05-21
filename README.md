@@ -52,6 +52,19 @@ Core product areas:
 - Git/GitHub
 - shared-hosting deployment
 
+## Shopware Integration Flow
+
+```mermaid
+flowchart LR
+    A["SkillBuilder Admin"] --> B["Shopware Demo-Produkte Button"]
+    B --> C["Symfony Import Service"]
+    C --> D["Shopware Admin API"]
+    D --> E["Shopware-Produkte in SkillBuilder Kurse"]
+    C --> F["Sync-Log und Statuskarte im Admin"]
+```
+
+Only published SkillBuilder lessons are synchronized as Shopware products. Draft or archived lessons stay out of the storefront or are deactivated during sync.
+
 ## What Is Included
 
 - [Case study](docs/case-study.md)
