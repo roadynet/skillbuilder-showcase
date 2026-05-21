@@ -54,18 +54,18 @@ sequenceDiagram
     participant Storefront as Shopware Storefront
 
     Admin->>SkillBuilder: Click "Shopware Demo-Produkte"
-    SkillBuilder->>Importer: Load lessons and sections
-    Importer->>API: Upsert categories for published lessons/sections
+    SkillBuilder->>Importer: Load published lessons
+    Importer->>API: Ensure SkillBuilder shop category exists
     Importer->>API: Create or update products
     Importer->>API: Deactivate unpublished course products
-    Importer->>API: Hide orphaned course categories
-    API->>Storefront: Products become visible in shop categories
+    Importer->>API: Hide obsolete child categories from earlier imports
+    API->>Storefront: Products become visible in the SkillBuilder shop category
 ```
 
 Mapping:
 
 - Published lesson becomes a Shopware product
-- Lesson section becomes a Shopware category
+- Products are assigned to the `SkillBuilder Kurse` shop category
 - Product numbers use a stable `SB-COURSE-*` format
 - Repeated imports update existing products instead of duplicating them
 - Unpublished lessons are removed from storefront visibility

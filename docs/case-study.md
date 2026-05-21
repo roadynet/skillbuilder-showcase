@@ -58,7 +58,7 @@ I worked across product, backend, UI, testing, security, and deployment:
 - Twig UI with reusable design patterns
 - role-aware admin/user navigation
 - secure GDPR export context
-- API-based Shopware integration that maps published lessons to products and sections to categories
+- API-based Shopware integration that maps published lessons to products
 - product activation/deactivation based on SkillBuilder publication status
 - migration hygiene checks
 - PHPUnit tests and Symfony lint checks

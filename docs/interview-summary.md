@@ -19,7 +19,7 @@ The project shows backend development, product thinking, UI improvement, securit
 - admin question editing with progress awareness
 - GDPR export workflow
 - Shopware Admin API synchronization for published lessons
-- product/category mapping across two systems
+- stable product mapping across two systems
 - PHPUnit tests for core business rules
 - production smoke checks and deployment hygiene
 
