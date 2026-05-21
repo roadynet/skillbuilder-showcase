@@ -56,5 +56,5 @@ This feature demonstrates:
 - idempotent import logic
 - status-driven product synchronization
 - domain mapping between learning content and commerce entities
-- live operational work across two production-style systems
+- live operational work across two deployed systems
 - business-process automation for content-to-commerce workflows

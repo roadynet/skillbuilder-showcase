@@ -1,12 +1,16 @@
-# SkillBuilder Showcase
+# SkillBuilder
 
-Public portfolio repository for **SkillBuilder**, a private Symfony-based learning platform.
+Portfolio evidence for **SkillBuilder**, a private Symfony-based learning platform built, deployed, and maintained as a practical backend project.
 
-This repository intentionally does **not** contain the production source code. It contains a product case study, architecture notes, selected anonymized examples, screenshots, and quality evidence that can be shared with employers or clients.
+**Positioning:** PHP / Symfony backend development, business applications, data-driven workflows, application support, and API-based e-commerce integration.
+
+**Core proof:** Development, deployment, and operation of a Symfony learning platform with Doctrine, Twig, MariaDB, role-based workflows, learning logic, GDPR export, tests, and a real Shopware Admin API bridge.
+
+This repository intentionally does **not** contain the private application source code. It contains a product case study, architecture notes, selected anonymized examples, screenshots, and quality evidence that can be shared with employers or clients.
 
 ## Why This Repository Exists
 
-The real SkillBuilder application contains private implementation details, deployment configuration, and product-specific code. For public portfolio use, this showcase repository presents:
+The real SkillBuilder application contains private implementation details, deployment configuration, and product-specific code. For public portfolio use, this repository presents:
 
 - what the product does
 - which technical problems were solved
@@ -25,6 +29,12 @@ Connected Shopware demo repository: [roadynet/shopware-demo-shop](https://github
 ## Project Summary
 
 SkillBuilder is a learning platform built with PHP/Symfony. It combines structured lessons, adaptive question practice, progress tracking, personal learning settings, admin workflows, GDPR-oriented export features, production deployment, and a real Shopware Admin API synchronization workflow.
+
+## Practical Development Since 2023
+
+After completing the IHK qualification, SkillBuilder became the main practical project for deepening modern PHP/Symfony development. The work covers architecture, implementation, debugging, deployment, database work, tests, UI polish, and integration with a real Shopware installation.
+
+This is the project used to demonstrate current hands-on practice in Symfony backend development and connected business software.
 
 Core product areas:
 
@@ -51,6 +61,8 @@ Core product areas:
 - Composer
 - Git/GitHub
 - shared-hosting deployment
+- Shopware 6 integration basics
+- Shopware Admin API product synchronization
 
 ## Shopware Integration Flow
 

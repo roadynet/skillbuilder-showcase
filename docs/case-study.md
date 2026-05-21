@@ -4,7 +4,7 @@
 
 SkillBuilder is a private Symfony learning platform built to manage structured course content, adaptive practice, user progress, and admin workflows.
 
-The project was developed as a production-style application rather than a static demo. It includes authentication, authorization, content workflows, learning logic, statistics, GDPR-oriented data export, deployment, automated tests, and a real Shopware Admin API synchronization workflow.
+The project was developed as a working Symfony application rather than a static demo. It includes authentication, authorization, content workflows, learning logic, statistics, GDPR-oriented data export, deployment, automated tests, and a real Shopware Admin API synchronization workflow.
 
 ## Problem
 
@@ -49,6 +49,10 @@ I worked across product, backend, UI, testing, security, and deployment:
 - added PHPUnit coverage for core learning rules
 - fixed Doctrine mapping validation issues
 - deployed and smoke-tested the production instance
+
+## Current Practice Since 2023
+
+SkillBuilder documents ongoing hands-on PHP/Symfony work after the IHK qualification: backend implementation, Doctrine data modeling, Twig UI work, deployment, debugging, testing, and API integration. The project is used as portfolio evidence for current backend development practice rather than as a static learning exercise.
 
 ## Technical Highlights
 
