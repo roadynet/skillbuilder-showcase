@@ -81,9 +81,7 @@ Representative code examples:
 
 ![Learning settings](screenshots/05-learning-settings.png)
 
-![Admin cockpit](screenshots/06-admin-cockpit.png)
-
-![Admin Shopware import](screenshots/07-admin-shopware-import.png)
+![Admin cockpit with Shopware import](screenshots/06-admin-cockpit.png)
 
 ## What Is Not Included
 
