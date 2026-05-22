@@ -26,6 +26,18 @@ Demo credentials are not published in this repository. They can be provided duri
 
 Connected Shopware demo repository: [roadynet/shopware-demo-shop](https://github.com/roadynet/shopware-demo-shop)
 
+## Quick Facts
+
+| Bereich | Inhalt |
+| --- | --- |
+| Hauptprojekt | Symfony-Lernplattform SkillBuilder |
+| Live-Demo | `https://sb.mcmonaco.de` |
+| Backend-Fokus | PHP 8.4, Symfony 8, Doctrine, Twig, MariaDB, Rollen, Services, Tests |
+| Shopware-Bruecke | Admin-Button synchronisiert veroeffentlichte Lessons ueber die Shopware Admin API als Produkte |
+| Mapping | Lessons werden Produkte. Kapitel werden nicht als Kategorien synchronisiert. |
+| Shop-Kategorie | Produkte werden gesammelt der Shop-Kategorie `SkillBuilder Kurse` zugeordnet |
+| Demo-Schutz im Shop | Keine echten Bestellungen, keine Zahlung, keine Registrierung, kein Kontaktformular, keine personenbezogenen Shop-Daten |
+
 ## Project Summary
 
 SkillBuilder is a learning platform built with PHP/Symfony. It combines structured lessons, adaptive question practice, progress tracking, personal learning settings, admin workflows, GDPR-oriented export features, production deployment, and a real Shopware Admin API synchronization workflow.
@@ -45,7 +57,7 @@ Core product areas:
 - user-specific learning settings
 - learning statistics and reporting
 - admin question editing
-- Shopware Admin API bridge for synchronizing published lessons into commerce products, documented in the connected [Shopware demo repository](https://github.com/roadynet/shopware-demo-shop)
+- Shopware Admin API bridge for synchronizing published lessons into Shopware products, documented in the connected [Shopware demo repository](https://github.com/roadynet/shopware-demo-shop)
 - user and role management
 - GDPR data export workflow
 - PHPUnit tests for core learning behavior
@@ -64,18 +76,11 @@ Core product areas:
 - Shopware 6 integration basics
 - Shopware Admin API product synchronization
 
-## Shopware Integration Flow
+## Shopware Integration Architecture
 
-```mermaid
-flowchart LR
-    A["SkillBuilder Admin"] --> B["Shopware Demo-Produkte Button"]
-    B --> C["Symfony Import Service"]
-    C --> D["Shopware Admin API"]
-    D --> E["Shopware-Produkte in SkillBuilder Kurse"]
-    C --> F["Sync-Log und Statuskarte im Admin"]
-```
+![SkillBuilder Shopware Admin API bridge](docs/shopware-architecture-flow.svg)
 
-Only published SkillBuilder lessons are synchronized as Shopware products. Draft or archived lessons stay out of the storefront or are deactivated during sync.
+Only published SkillBuilder lessons are synchronized as Shopware products. Draft or archived lessons stay out of the storefront or are deactivated during sync. Lesson chapters are not synchronized as Shopware categories.
 
 ## What Is Included
 

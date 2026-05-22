@@ -10,6 +10,8 @@ SkillBuilder Admin -> Button -> Shopware Admin API -> Products
 
 Instead of describing integration work abstractly, the admin can trigger a real synchronization and then inspect the result in a live Shopware storefront.
 
+![SkillBuilder Shopware Admin API bridge](shopware-architecture-flow.svg)
+
 ## Demo Flow
 
 1. An admin opens the SkillBuilder dashboard.
@@ -18,7 +20,7 @@ Instead of describing integration work abstractly, the admin can trigger a real 
 4. The integration authenticates against the Shopware Admin API.
 5. Shopware receives or updates products.
 6. Products for unpublished lessons are deactivated.
-7. Obsolete child categories from earlier demo imports are hidden.
+7. Obsolete child categories from earlier demo import attempts are hidden.
 8. SkillBuilder stores the sync result in the admin log and status card.
 9. The storefront displays the synchronized SkillBuilder products.
 
@@ -33,6 +35,8 @@ Instead of describing integration work abstractly, the admin can trigger a real 
 | Lesson status `published` | Product visibility |
 | Admin import result | Sync log and status card |
 
+Chapters are intentionally not part of the Shopware mapping. They stay learning-structure data inside SkillBuilder.
+
 ## Design Notes
 
 - The import is admin-only.
@@ -42,9 +46,10 @@ Instead of describing integration work abstractly, the admin can trigger a real 
 - Re-running the import updates existing products.
 - Products are assigned to the `SkillBuilder Kurse` shop category.
 - Lesson chapters are not synchronized as categories in this demo.
-- Obsolete child categories from earlier demo imports are hidden again.
+- Obsolete child categories from earlier demo import attempts are hidden again.
 - Products are activated or deactivated based on SkillBuilder publication state.
 - The SkillBuilder admin dashboard shows the latest Shopware sync status.
+- The connected Shopware demo disables orders, payments, registration, contact forms, and personal-data collection.
 - Storefront styling was aligned with the SkillBuilder dashboard: navy header, blue accents, compact cards, and clear action buttons.
 
 ## Portfolio Value

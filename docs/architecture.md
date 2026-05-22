@@ -37,7 +37,7 @@ Representative service responsibilities:
 - select due questions
 - calculate progress and stability
 - import structured content
-- export demo commerce data to Shopware
+- synchronize published lessons to Shopware products
 - export user data with the correct request owner
 - log sensitive GDPR access
 
@@ -55,10 +55,10 @@ sequenceDiagram
 
     Admin->>SkillBuilder: Click "Shopware Demo-Produkte"
     SkillBuilder->>Importer: Load published lessons
-    Importer->>API: Ensure SkillBuilder shop category exists
+    Importer->>API: Ensure single SkillBuilder shop category exists
     Importer->>API: Create or update products
     Importer->>API: Deactivate unpublished course products
-    Importer->>API: Hide obsolete child categories from earlier imports
+    Importer->>API: Hide obsolete child categories from earlier demo import attempts
     API->>Storefront: Products become visible in the SkillBuilder shop category
 ```
 
@@ -66,9 +66,11 @@ Mapping:
 
 - Published lesson becomes a Shopware product
 - Products are assigned to the `SkillBuilder Kurse` shop category
+- Lesson chapters are not synchronized as Shopware categories
 - Product numbers use a stable `SB-COURSE-*` format
 - Repeated imports update existing products instead of duplicating them
 - Unpublished lessons are removed from storefront visibility
+- Sync results are shown in the SkillBuilder admin log and status card
 
 ## Security Model
 

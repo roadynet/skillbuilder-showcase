@@ -32,7 +32,7 @@ Main capabilities:
 - personal learning settings
 - progress and learning statistics
 - admin question editing
-- Shopware Admin API bridge for synchronizing published lessons into products
+- Shopware Admin API bridge for synchronizing published lessons into Shopware products
 - user and role management
 - GDPR data export request/download flow
 - automated service-level tests
@@ -63,6 +63,7 @@ SkillBuilder documents ongoing hands-on PHP/Symfony work after the IHK qualifica
 - role-aware admin/user navigation
 - secure GDPR export context
 - API-based Shopware integration that maps published lessons to products
+- explicit Shopware mapping: lessons become products, chapters stay inside SkillBuilder and are not synchronized as categories
 - product activation/deactivation based on SkillBuilder publication status
 - migration hygiene checks
 - PHPUnit tests and Symfony lint checks

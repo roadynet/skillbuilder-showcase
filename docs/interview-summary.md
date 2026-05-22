@@ -22,6 +22,7 @@ The project shows backend development, product thinking, UI improvement, securit
 - GDPR export workflow
 - Shopware Admin API synchronization for published lessons
 - stable product mapping across two systems
+- clear mapping boundary: lessons become products, chapters are not synchronized as categories
 - current hands-on practice since the IHK qualification through ongoing SkillBuilder development
 - PHPUnit tests for core business rules
 - production smoke checks and deployment hygiene

@@ -31,7 +31,10 @@ Place screenshots in `screenshots/`.
 5. Show learning settings.
 6. Show learning statistics.
 7. Show admin question editing.
-8. Mention tests and quality checks.
+8. Show the Shopware demo product import button.
+9. Explain the mapping: published lessons become products, chapters are not categories.
+10. Show the connected Shopware storefront as no-order/no-payment demo.
+11. Mention tests and quality checks.
 
 ## Safety Notes
 
@@ -42,3 +45,5 @@ Do not publish:
 - private source code
 - real user data
 - full admin access
+- Shopware credentials
+- real shop orders, payments, registrations, or contact-form submissions
