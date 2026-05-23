@@ -98,6 +98,7 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [Architecture overview](docs/architecture.md)
 - [Quality and test report](docs/quality-report.md)
 - [Interview summary](docs/interview-summary.md)
+- [Interview Q&A](docs/interview-qa.md)
 - [Recruiter project summary](docs/project-summary-for-recruiters.md)
 - [Demo checklist](docs/demo-checklist.md)
 - [Code walkthrough](docs/code-walkthrough.md)
