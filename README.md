@@ -2,6 +2,8 @@
 
 Portfolio evidence for **SkillBuilder**, a private Symfony-based learning platform built, deployed, and maintained as a practical backend project.
 
+**Recruiter summary:** Symfony learning platform with role-based workflows, learning logic, GDPR-oriented features, deployment evidence, and a real Shopware Admin API bridge. Published SkillBuilder lessons can be synchronized as Shopware products through an admin workflow.
+
 **Positioning:** PHP / Symfony backend development, business applications, data-driven workflows, application support, and API-based e-commerce integration.
 
 **Core proof:** Development, deployment, and operation of a Symfony learning platform with Doctrine, Twig, MariaDB, role-based workflows, learning logic, GDPR export, tests, and a real Shopware Admin API bridge.
@@ -25,6 +27,14 @@ Demo URL: `https://sb.mcmonaco.de`
 Demo credentials are not published in this repository. They can be provided during an interview or live walkthrough.
 
 Connected Shopware demo repository: [roadynet/shopware-demo-shop](https://github.com/roadynet/shopware-demo-shop)
+
+## What I Built
+
+- Symfony learning platform with login, roles, lessons, questions, progress tracking, learning settings, statistics, and admin workflows
+- Service-oriented backend logic for scheduling, question selection, progress calculation, imports, and GDPR export
+- Admin-only Shopware bridge that synchronizes published SkillBuilder lessons as Shopware products
+- Deployment and operation on a live web server
+- Public showcase with screenshots, architecture notes, test evidence, and safe code examples
 
 ## Quick Facts
 
@@ -88,6 +98,7 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [Architecture overview](docs/architecture.md)
 - [Quality and test report](docs/quality-report.md)
 - [Interview summary](docs/interview-summary.md)
+- [Recruiter project summary](docs/project-summary-for-recruiters.md)
 - [Demo checklist](docs/demo-checklist.md)
 - [Code walkthrough](docs/code-walkthrough.md)
 - [Shopware bridge](docs/shopware-bridge.md)
