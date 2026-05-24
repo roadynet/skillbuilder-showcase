@@ -2,6 +2,18 @@
 
 ## Automated Tests
 
+Public showcase examples:
+
+```text
+phpunit
+
+4 tests
+7 assertions
+OK
+```
+
+The public tests cover representative examples for learning scheduling and section-code parsing.
+
 Current private test suite:
 
 ```text
@@ -56,4 +68,3 @@ Performed checks:
 ## Important Finding Fixed
 
 Doctrine validation found an inconsistent mapping between the lesson owner relation and the user lessons collection. The relationship was corrected by adding the inverse side to the owner relation.
-

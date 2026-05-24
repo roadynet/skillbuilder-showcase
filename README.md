@@ -144,6 +144,20 @@ This repository does not include:
 
 ## Test Evidence
 
+Public showcase checks:
+
+```bash
+phpunit
+```
+
+Current public example test result:
+
+```text
+4 tests
+7 assertions
+OK
+```
+
 The private codebase currently has:
 
 ```text

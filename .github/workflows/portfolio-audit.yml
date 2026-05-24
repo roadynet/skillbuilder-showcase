@@ -21,6 +21,7 @@ jobs:
         with:
           php-version: '8.4'
           coverage: none
+          tools: phpunit:11.5
 
       - name: Check PHP example syntax
         shell: bash
@@ -29,6 +30,9 @@ jobs:
           while IFS= read -r file; do
             php -l "$file"
           done < <(find examples -name '*.php' -type f | sort)
+
+      - name: Run public PHPUnit examples
+        run: phpunit
 
       - name: Check local Markdown links
         shell: python

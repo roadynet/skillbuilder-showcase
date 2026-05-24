@@ -32,11 +32,11 @@ final class SectionCodeServiceExample
         foreach ($codes as $code) {
             $value = $this->normalize($code);
             if ($value !== null) {
-                $normalized[$value] = true;
+                $normalized[$value] = $value;
             }
         }
 
-        $result = array_keys($normalized);
+        $result = array_values($normalized);
         usort($result, fn (string $left, string $right): int => $this->compare($left, $right));
 
         return $result;
@@ -93,4 +93,3 @@ final class SectionCodeServiceExample
         return $normalized === '' ? '0' : $normalized;
     }
 }
-

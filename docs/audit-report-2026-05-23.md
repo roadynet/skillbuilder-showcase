@@ -30,6 +30,7 @@ The repository presents SkillBuilder as the main Symfony learning-platform proje
 - Recruiter summary and interview Q&A are present.
 - Local Markdown links resolve correctly.
 - PHP example files pass syntax checks.
+- Public PHPUnit examples pass with 4 tests and 7 assertions.
 - No production credentials, `.env` files, database URLs, GitHub tokens, OpenAI keys, or known leaked passwords were found.
 - Live demo URL returned HTTP 200 during audit.
 - Git working tree was clean before the audit changes.
@@ -40,6 +41,7 @@ The repository presents SkillBuilder as the main Symfony learning-platform proje
 rg consistency search for outdated chapter/category wording
 rg secret-pattern search for credentials, tokens, database URLs and environment secrets
 php -l examples/*.php
+phpunit
 Invoke-WebRequest https://sb.mcmonaco.de
 ```
 
