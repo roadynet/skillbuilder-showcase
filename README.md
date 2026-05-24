@@ -1,5 +1,7 @@
 # SkillBuilder
 
+[![Portfolio Audit](https://github.com/roadynet/skillbuilder-showcase/actions/workflows/portfolio-audit.yml/badge.svg)](https://github.com/roadynet/skillbuilder-showcase/actions/workflows/portfolio-audit.yml)
+
 Portfolio evidence for **SkillBuilder**, a private Symfony-based learning platform built, deployed, and maintained as a practical backend project.
 
 **Recruiter summary:** Symfony learning platform with role-based workflows, learning logic, GDPR-oriented features, deployment evidence, and a real Shopware Admin API bridge. Published SkillBuilder lessons can be synchronized as Shopware products through an admin workflow.
