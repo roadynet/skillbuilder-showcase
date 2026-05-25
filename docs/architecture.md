@@ -57,7 +57,7 @@ sequenceDiagram
     SkillBuilder->>Importer: Load published lessons
     Importer->>API: Ensure single SkillBuilder shop category exists
     Importer->>API: Create or update products
-    Importer->>API: Deactivate unpublished course products
+    Importer->>API: Deactivate unpublished lesson products
     Importer->>API: Hide obsolete child categories from earlier demo import attempts
     API->>Storefront: Products become visible in the SkillBuilder shop category
 ```
