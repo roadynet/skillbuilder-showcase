@@ -57,6 +57,12 @@ The public repositories do not include production credentials, private source co
 
 The connected Shopware storefront is a portfolio demo. It does not process real orders, payments, registrations, contact forms, or customer data.
 
+## Configuration And Secrets
+
+The repository includes [.env.example](../.env.example) with placeholder names only. Real values are configured on the server or in CI secrets and are not committed to GitHub.
+
+Shopware Admin API credentials are used only by the Symfony backend. They are not exposed in storefront JavaScript.
+
 ## Interview Talking Points
 
 - why published lessons are the source of truth

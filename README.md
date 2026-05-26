@@ -88,6 +88,24 @@ Core product areas:
 - Shopware 6 integration basics
 - Shopware Admin API product synchronization
 
+## Configuration And Secrets
+
+The public repository contains only placeholder configuration in [.env.example](.env.example).
+
+Real secrets are never committed. In production, values such as `APP_SECRET`, `DATABASE_URL`, and Shopware Admin API credentials live in the server environment.
+
+The Shopware bridge reads configuration such as:
+
+```env
+SHOPWARE_ADMIN_BASE_URL=
+SHOPWARE_ADMIN_USERNAME=
+SHOPWARE_ADMIN_PASSWORD=
+SHOPWARE_SYNC_CATEGORY_NAME=SkillBuilder Kurse
+SHOPWARE_SYNC_PRODUCT_PREFIX=SB-COURSE-
+```
+
+Frontend JavaScript must never contain Shopware Admin API credentials. The integration runs server-side in Symfony.
+
 ## Shopware Integration Architecture
 
 ![SkillBuilder Shopware Admin API bridge](docs/shopware-architecture-flow.svg)
@@ -138,7 +156,7 @@ This repository does not include:
 
 - production application source code
 - database credentials
-- `.env` files
+- real `.env` files
 - private deployment scripts
 - user data
 - full business logic

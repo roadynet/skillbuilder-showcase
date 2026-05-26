@@ -2,5 +2,5 @@
 /.phpunit.cache/
 /.env
 /.env.*
+!/.env.example
 !/screenshots/.gitkeep
-
