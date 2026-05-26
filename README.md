@@ -103,6 +103,8 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [Interview Q&A](docs/interview-qa.md)
 - [Recruiter project summary](docs/project-summary-for-recruiters.md)
 - [Portfolio audit report](docs/audit-report-2026-05-23.md)
+- [Demo script](docs/demo-script.md)
+- [Changelog](CHANGELOG.md)
 - [Demo checklist](docs/demo-checklist.md)
 - [Code walkthrough](docs/code-walkthrough.md)
 - [Shopware bridge](docs/shopware-bridge.md)
