@@ -59,7 +59,7 @@ The connected Shopware storefront is a portfolio demo. It does not process real 
 
 ## Configuration And Secrets
 
-The repository includes [.env.example](../.env.example) with placeholder names only. Real values are configured on the server or in CI secrets and are not committed to GitHub.
+The repository includes [.env.example](../.env.example) with placeholder names only. Real values are configured on the server, in CI secrets, or in a private config file outside the application directory and are not committed to GitHub.
 
 Shopware Admin API credentials are used only by the Symfony backend. They are not exposed in storefront JavaScript.
 

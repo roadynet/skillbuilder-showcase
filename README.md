@@ -92,7 +92,24 @@ Core product areas:
 
 The public repository contains only placeholder configuration in [.env.example](.env.example).
 
-Real secrets are never committed. In production, values such as `APP_SECRET`, `DATABASE_URL`, and Shopware Admin API credentials live in the server environment.
+Real secrets are never committed. In production, values such as `APP_SECRET`, `DATABASE_URL`, and Shopware Admin API credentials live in the server environment or in a private config file outside the application directory.
+
+Recommended server-side pattern:
+
+```text
+/www/htdocs/example/
+├── projects/
+│   ├── sb/
+│   └── shopware/
+└── private-config/
+    └── skillbuilder-shopware.env
+```
+
+SkillBuilder can point to the external file with:
+
+```env
+SKILLBUILDER_SECRETS_FILE=/www/htdocs/example/private-config/skillbuilder-shopware.env
+```
 
 The Shopware bridge reads configuration such as:
 
