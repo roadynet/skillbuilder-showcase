@@ -72,6 +72,11 @@ PHPStan on changed command/controller/service files without baseline: OK
 PHPStan on src/Entity with reduced baseline: OK
 ```
 
+Supporting evidence:
+
+- [PHPStan baseline reduction evidence](evidence/phpstan-baseline-reduction-2026-06-05.md)
+- [Private codebase verification notes](evidence/private-codebase-verification-2026-06-05.md)
+
 The full private-codebase PHPStan run is wired through the `Testing` workflow. The local Windows/P-drive environment required a PowerShell wrapper that copies the PHPStan PHAR to `%TEMP%` before execution.
 
 ## Current Quality Impact
@@ -82,4 +87,3 @@ This audit turns PHPStan from a one-off scan into repeatable project evidence:
 - real PHPStan findings were fixed rather than hidden
 - the baseline is narrow and explainable
 - the remaining debt has a clear next step: add Doctrine-aware PHPStan support
-

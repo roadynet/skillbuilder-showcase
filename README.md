@@ -139,6 +139,7 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [Recruiter project summary](docs/project-summary-for-recruiters.md)
 - [Portfolio audit report](docs/audit-report-2026-05-23.md)
 - [PHPStan audit evidence](docs/phpstan-audit-2026-06-05.md)
+- [Evidence index](docs/evidence/README.md)
 - [Demo script](docs/demo-script.md)
 - [Changelog](CHANGELOG.md)
 - [Demo checklist](docs/demo-checklist.md)
@@ -217,6 +218,7 @@ Additional checks performed:
 - router checks
 - live smoke checks for public and protected routes
 - PHPStan audit setup added in the private codebase; baseline reduced from 56 findings to 17 Doctrine generated-ID findings
+- Evidence notes added for the PHPStan baseline reduction and private codebase verification limits
 
 ## Portfolio Positioning
 
