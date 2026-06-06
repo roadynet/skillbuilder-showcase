@@ -65,6 +65,12 @@ Performed checks:
 - Doctrine mapping validation
 - live smoke checks against production routes
 
+Detailed evidence:
+
+- [Evidence index](evidence/README.md)
+- [PHPStan baseline reduction evidence](evidence/phpstan-baseline-reduction-2026-06-05.md)
+- [Private codebase verification notes](evidence/private-codebase-verification-2026-06-05.md)
+
 ## Important Finding Fixed
 
 Doctrine validation found an inconsistent mapping between the lesson owner relation and the user lessons collection. The relationship was corrected by adding the inverse side to the owner relation.
