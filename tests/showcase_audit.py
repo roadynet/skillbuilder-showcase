@@ -7,6 +7,7 @@ import re
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from fnmatch import fnmatch
 from pathlib import Path
 from urllib.parse import unquote
 
@@ -14,7 +15,7 @@ from urllib.parse import unquote
 ROOT = Path(__file__).resolve().parents[1]
 TEXT_SUFFIXES = {".md", ".php", ".svg", ".txt", ".yml", ".yaml", ".xml"}
 ALLOWED_ENV_FILES = {Path(".env.example")}
-IGNORED_SCAN_DIRS = {".git", "vendor", ".phpunit.cache"}
+IGNORED_SCAN_DIRS = {".git", "vendor", ".phpunit.cache", ".phpstan.cache"}
 
 
 def fail(message: str) -> None:
@@ -24,8 +25,39 @@ def fail(message: str) -> None:
 
 def tracked_files(*patterns: str) -> list[Path]:
     cmd = ["git", "ls-files", *patterns]
-    output = subprocess.check_output(cmd, cwd=ROOT, text=True)
-    return [Path(line) for line in output.splitlines() if line.strip()]
+    try:
+        output = subprocess.check_output(
+            cmd,
+            cwd=ROOT,
+            text=True,
+            stderr=subprocess.DEVNULL,
+        )
+        return [
+            Path(line)
+            for line in output.splitlines()
+            if line.strip() and (ROOT / line).is_file()
+        ]
+    except (FileNotFoundError, subprocess.CalledProcessError):
+        return filesystem_files(*patterns)
+
+
+def filesystem_files(*patterns: str) -> list[Path]:
+    files = []
+
+    for path in ROOT.rglob("*"):
+        if not path.is_file():
+            continue
+
+        relative = path.relative_to(ROOT)
+        if any(part in IGNORED_SCAN_DIRS for part in relative.parts):
+            continue
+
+        if patterns and not any(fnmatch(relative.as_posix(), pattern) for pattern in patterns):
+            continue
+
+        files.append(relative)
+
+    return sorted(files)
 
 
 def read_text(path: Path) -> str:

@@ -141,6 +141,8 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [PHPStan audit evidence](docs/phpstan-audit-2026-06-05.md)
 - [Evidence index](docs/evidence/README.md)
 - [Senior Symfony review guide](docs/senior-symfony-review.md)
+- [Security and privacy boundary](docs/security-privacy.md)
+- [Architecture decisions](docs/adr/)
 - [Demo script](docs/demo-script.md)
 - [Changelog](CHANGELOG.md)
 - [Demo checklist](docs/demo-checklist.md)
@@ -187,9 +189,9 @@ This repository does not include:
 Public showcase checks:
 
 ```bash
-phpunit
-phpstan analyse --configuration=phpstan.neon
-python tests/showcase_audit.py
+composer install
+composer verify
+composer smoke:public
 ```
 
 Current public example test result:

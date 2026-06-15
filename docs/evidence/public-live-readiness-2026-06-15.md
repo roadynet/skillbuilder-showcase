@@ -17,6 +17,7 @@ roadynet/skillbuilder-showcase
 Local checks performed:
 
 ```text
+composer verify: OK
 PHP syntax check for examples and tests: OK
 PHPUnit 11.5.55 on PHP 8.4.21: OK, 7 tests, 10 assertions
 PHPStan 2.2.2 level max for public examples: OK
@@ -43,6 +44,12 @@ Public routes checked without publishing credentials:
 | `/dsgvo` | 200 | CSP and nosniff present |
 
 The canonical public privacy route for this project is `/dsgvo`.
+
+Repeatable command:
+
+```bash
+composer smoke:public
+```
 
 ## Notes
 

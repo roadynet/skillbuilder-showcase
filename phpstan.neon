@@ -2,5 +2,3 @@ parameters:
     level: max
     paths:
         - examples
-    bootstrapFiles:
-        - tests/phpstan/phpunit-bootstrap.php

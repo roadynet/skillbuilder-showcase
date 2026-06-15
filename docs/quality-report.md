@@ -5,7 +5,7 @@
 Public showcase examples:
 
 ```text
-phpunit
+composer verify
 
 7 tests
 10 assertions
@@ -30,9 +30,17 @@ phpunit.xml is valid XML
 Public PHPStan check:
 
 ```text
-phpstan analyse --configuration=phpstan.neon
+composer analyse
 
 [OK] No errors
+```
+
+Public live smoke check:
+
+```text
+composer smoke:public
+
+/health, /login, /register, /impressum, /dsgvo: 200 with security headers
 ```
 
 Current private test suite:
@@ -98,6 +106,10 @@ Detailed evidence:
 Related senior review context:
 
 - [Senior Symfony review guide](senior-symfony-review.md)
+- [Security and privacy boundary](security-privacy.md)
+- [ADR 0001: public/private repository split](adr/0001-public-private-repository-split.md)
+- [ADR 0002: Composer verify for public showcase checks](adr/0002-composer-verify-for-public-showcase.md)
+- [ADR 0003: Shopware sync boundary](adr/0003-shopware-sync-boundary.md)
 
 ## Important Finding Fixed
 

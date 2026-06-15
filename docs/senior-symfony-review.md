@@ -13,7 +13,8 @@ Start here:
 3. [Quality report](quality-report.md)
 4. [Shopware bridge](shopware-bridge.md)
 5. [Public live readiness evidence](evidence/public-live-readiness-2026-06-15.md)
-6. Representative examples in [`examples/`](../examples/)
+6. [Security and privacy boundary](security-privacy.md)
+7. Representative examples in [`examples/`](../examples/)
 
 The fastest technical read is the combination of the architecture page, the service examples, and the PHPUnit tests.
 
@@ -40,6 +41,7 @@ SkillBuilder is positioned as a backend-driven Symfony business application, not
 | Secrets stay outside Git | Public showcase has placeholders only; production values live in environment or private config outside the repo tree | [README](../README.md), [.env.example](../.env.example) |
 | Public repository has its own safety audit | The showcase should prove it is safe to publish, not merely claim it | [`tests/showcase_audit.py`](../tests/showcase_audit.py) |
 | Static analysis is part of the public proof | PHPStan runs at `level: max` for the representative PHP examples without requiring private code | [`phpstan.neon`](../phpstan.neon), [Quality report](quality-report.md) |
+| One command verifies the public evidence | Reviewers can run the same check locally and in CI | [`composer.json`](../composer.json), [ADR 0002](adr/0002-composer-verify-for-public-showcase.md) |
 
 ## Symfony-Specific Signals
 
@@ -66,6 +68,7 @@ The project also documents non-glamorous production concerns:
 - live smoke checks after cache and configuration changes
 - external secrets file pattern for server-only credentials
 - public/private repository split
+- Composer-based public verification command
 - evidence notes for checks that are safe to publish
 
 This matters because many Symfony failures are operational rather than syntactic: stale containers, miswired services, environment drift, wrong cache state, or credentials leaking into the wrong layer.

@@ -2,6 +2,9 @@
 
 ## 2026-06-15
 
+- Added Composer-based reproducible verification with `composer verify` and a separate `composer smoke:public` live check.
+- Added ADRs for the public/private repository split, Composer verification, and the Shopware synchronization boundary.
+- Added a security and privacy boundary document for public showcase review.
 - Added PHPStan `level: max` for public PHP examples and wired it into the Portfolio Audit workflow.
 - Added a Senior Symfony review guide that explains architecture boundaries, trade-offs, operational evidence, and reviewer prompts.
 - Added PHPUnit coverage for the public next-due-question example.
