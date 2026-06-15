@@ -39,6 +39,7 @@ SkillBuilder is positioned as a backend-driven Symfony business application, not
 | Shopware sync is admin-triggered and idempotent | Repeated imports should update existing products and deactivate obsolete ones, not create duplicates | [Shopware bridge](shopware-bridge.md) |
 | Secrets stay outside Git | Public showcase has placeholders only; production values live in environment or private config outside the repo tree | [README](../README.md), [.env.example](../.env.example) |
 | Public repository has its own safety audit | The showcase should prove it is safe to publish, not merely claim it | [`tests/showcase_audit.py`](../tests/showcase_audit.py) |
+| Static analysis is part of the public proof | PHPStan runs at `level: max` for the representative PHP examples without requiring private code | [`phpstan.neon`](../phpstan.neon), [Quality report](quality-report.md) |
 
 ## Symfony-Specific Signals
 
@@ -51,6 +52,7 @@ The private application work represented here includes:
 - Doctrine ORM entities, repositories, mapping validation, and migration hygiene
 - service-layer business rules for learning progress, due-question selection, imports, statistics, exports, and external API synchronization
 - PHPUnit tests for core learning behavior
+- PHPStan for public example static analysis
 - production smoke checks for public and authenticated routes
 
 The public examples are reduced, but they mirror the shape of the real implementation: small services with deterministic inputs, explicit state transitions, and tests around business rules.

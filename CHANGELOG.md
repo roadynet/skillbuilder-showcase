@@ -2,6 +2,7 @@
 
 ## 2026-06-15
 
+- Added PHPStan `level: max` for public PHP examples and wired it into the Portfolio Audit workflow.
 - Added a Senior Symfony review guide that explains architecture boundaries, trade-offs, operational evidence, and reviewer prompts.
 - Added PHPUnit coverage for the public next-due-question example.
 - Added a repeatable public showcase safety audit for env-file policy, obvious secret patterns, private-code path leakage, local links, screenshots, wording consistency, and PHPUnit XML parsing.

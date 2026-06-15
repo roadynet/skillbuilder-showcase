@@ -188,6 +188,7 @@ Public showcase checks:
 
 ```bash
 phpunit
+phpstan analyse --configuration=phpstan.neon
 python tests/showcase_audit.py
 ```
 
@@ -213,6 +214,7 @@ OK
 Additional checks performed:
 
 - public showcase safety audit for env-file policy, obvious secret patterns, private-code path leakage, local links, screenshots, and wording consistency
+- PHPStan `level: max` for public PHP examples
 - PHP syntax check across 180 files
 - Twig lint across 38 templates
 - YAML lint across 18 config files

@@ -21,7 +21,7 @@ jobs:
         with:
           php-version: '8.4'
           coverage: none
-          tools: phpunit:11.5
+          tools: phpunit:11.5, phpstan
 
       - name: Check PHP example syntax
         shell: bash
@@ -33,6 +33,9 @@ jobs:
 
       - name: Run public PHPUnit examples
         run: phpunit
+
+      - name: Run PHPStan on public examples
+        run: phpstan analyse --configuration=phpstan.neon --no-progress
 
       - name: Run public showcase safety audit
         run: python tests/showcase_audit.py

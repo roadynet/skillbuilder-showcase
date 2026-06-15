@@ -27,6 +27,14 @@ public wording is consistent
 phpunit.xml is valid XML
 ```
 
+Public PHPStan check:
+
+```text
+phpstan analyse --configuration=phpstan.neon
+
+[OK] No errors
+```
+
 Current private test suite:
 
 ```text
@@ -78,6 +86,7 @@ Performed checks:
 - Doctrine mapping validation
 - live smoke checks against production routes
 - public showcase safety audit for secrets, private-code leaks, local links, screenshots, and wording consistency
+- PHPStan `level: max` for public PHP examples
 
 Detailed evidence:
 
