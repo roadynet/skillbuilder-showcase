@@ -30,6 +30,18 @@ Lessons that are no longer published should not remain visible as active shop pr
 
 It demonstrates practical backend work: service design, data modeling, authentication and role checks, status-driven workflows, integration with an external API, safe handling of environment-specific configuration, deployment, and documentation.
 
+## What should a senior Symfony reviewer inspect first?
+
+Start with the [Senior Symfony review guide](senior-symfony-review.md), then read the architecture page, code walkthrough, quality report, and service examples. The key signal is not that private production code is public. It is that the system has clear boundaries, repeatable checks, operational evidence, and examples of business rules that are testable outside HTTP controllers.
+
+## How are controller and service responsibilities separated?
+
+Controllers are treated as HTTP adapters: routing, form handling, CSRF, redirects, access checks, and response rendering. Scheduling, due-question selection, import decisions, export ownership, and external sync policy belong in services so they can be tested and debugged independently.
+
+## What are the most important trade-offs?
+
+The public showcase trades full source visibility for privacy and safety. To compensate, it includes representative service examples, tests, architecture notes, live-readiness evidence, and a public audit script that guards against accidentally publishing secrets or private application paths.
+
 ## Why is this relevant for a Shopware role?
 
 It shows hands-on work with Shopware concepts and the Shopware Admin API: product synchronization, product visibility, category assignment, API authentication, and a demo storefront that makes the result visible.
@@ -45,3 +57,5 @@ The public showcase does not contain production source code, real user data, cre
 - stronger product metadata mapping
 - dedicated end-to-end tests for login and learning flows
 - more reporting filters in the admin area
+- more voter-level authorization examples
+- async retry handling for longer-running imports or external API sync

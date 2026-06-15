@@ -140,6 +140,7 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [Portfolio audit report](docs/audit-report-2026-05-23.md)
 - [PHPStan audit evidence](docs/phpstan-audit-2026-06-05.md)
 - [Evidence index](docs/evidence/README.md)
+- [Senior Symfony review guide](docs/senior-symfony-review.md)
 - [Demo script](docs/demo-script.md)
 - [Changelog](CHANGELOG.md)
 - [Demo checklist](docs/demo-checklist.md)
@@ -193,8 +194,8 @@ python tests/showcase_audit.py
 Current public example test result:
 
 ```text
-4 tests
-7 assertions
+7 tests
+10 assertions
 OK
 ```
 

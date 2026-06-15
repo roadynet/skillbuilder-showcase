@@ -2,6 +2,8 @@
 
 ## 2026-06-15
 
+- Added a Senior Symfony review guide that explains architecture boundaries, trade-offs, operational evidence, and reviewer prompts.
+- Added PHPUnit coverage for the public next-due-question example.
 - Added a repeatable public showcase safety audit for env-file policy, obvious secret patterns, private-code path leakage, local links, screenshots, wording consistency, and PHPUnit XML parsing.
 - Added public live readiness evidence for the live demo's public routes and security headers.
 - Extended the Portfolio Audit workflow to run the showcase safety audit and lint PHP files in both `examples/` and `tests/`.

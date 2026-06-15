@@ -18,7 +18,7 @@ Local checks performed:
 
 ```text
 PHP syntax check for examples and tests: OK
-PHPUnit 11.5.55 on PHP 8.4.21: OK, 4 tests, 7 assertions
+PHPUnit 11.5.55 on PHP 8.4.21: OK, 7 tests, 10 assertions
 Local Markdown links: OK
 Public wording consistency: OK
 Environment file policy: OK

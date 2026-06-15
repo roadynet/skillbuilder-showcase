@@ -7,8 +7,8 @@ Public showcase examples:
 ```text
 phpunit
 
-4 tests
-7 assertions
+7 tests
+10 assertions
 OK
 ```
 
@@ -85,6 +85,10 @@ Detailed evidence:
 - [PHPStan baseline reduction evidence](evidence/phpstan-baseline-reduction-2026-06-05.md)
 - [Private codebase verification notes](evidence/private-codebase-verification-2026-06-05.md)
 - [Public live readiness evidence](evidence/public-live-readiness-2026-06-15.md)
+
+Related senior review context:
+
+- [Senior Symfony review guide](senior-symfony-review.md)
 
 ## Important Finding Fixed
 
