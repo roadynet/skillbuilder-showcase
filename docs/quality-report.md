@@ -14,6 +14,19 @@ OK
 
 The public tests cover representative examples for learning scheduling and section-code parsing.
 
+Public showcase safety audit:
+
+```text
+python tests/showcase_audit.py
+
+private application paths are not tracked
+environment file policy is valid
+obvious secret patterns are absent
+local Markdown links and screenshots are valid
+public wording is consistent
+phpunit.xml is valid XML
+```
+
 Current private test suite:
 
 ```text
@@ -64,12 +77,14 @@ Performed checks:
 - Symfony container lint
 - Doctrine mapping validation
 - live smoke checks against production routes
+- public showcase safety audit for secrets, private-code leaks, local links, screenshots, and wording consistency
 
 Detailed evidence:
 
 - [Evidence index](evidence/README.md)
 - [PHPStan baseline reduction evidence](evidence/phpstan-baseline-reduction-2026-06-05.md)
 - [Private codebase verification notes](evidence/private-codebase-verification-2026-06-05.md)
+- [Public live readiness evidence](evidence/public-live-readiness-2026-06-15.md)
 
 ## Important Finding Fixed
 

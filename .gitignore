@@ -1,6 +1,12 @@
 /vendor/
 /.phpunit.cache/
+/__pycache__/
+**/__pycache__/
 /.env
 /.env.*
 !/.env.example
 !/screenshots/.gitkeep
+/config/secrets/
+/private-config/
+/public/uploads/
+/var/

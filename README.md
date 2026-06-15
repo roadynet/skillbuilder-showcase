@@ -187,6 +187,7 @@ Public showcase checks:
 
 ```bash
 phpunit
+python tests/showcase_audit.py
 ```
 
 Current public example test result:
@@ -210,6 +211,7 @@ OK
 
 Additional checks performed:
 
+- public showcase safety audit for env-file policy, obvious secret patterns, private-code path leakage, local links, screenshots, and wording consistency
 - PHP syntax check across 180 files
 - Twig lint across 38 templates
 - YAML lint across 18 config files
@@ -219,6 +221,7 @@ Additional checks performed:
 - live smoke checks for public and protected routes
 - PHPStan audit setup added in the private codebase; baseline reduced from 56 findings to 17 Doctrine generated-ID findings
 - Evidence notes added for the PHPStan baseline reduction and private codebase verification limits
+- Public live readiness evidence added for 2026-06-15
 
 ## Portfolio Positioning
 
