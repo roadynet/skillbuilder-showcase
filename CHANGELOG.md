@@ -1,5 +1,17 @@
 # Changelog
 
+## 2026-06-15
+
+- Added Composer-based reproducible verification with `composer verify` and a separate `composer smoke:public` live check.
+- Added ADRs for the public/private repository split, Composer verification, and the Shopware synchronization boundary.
+- Added a security and privacy boundary document for public showcase review.
+- Added PHPStan `level: max` for public PHP examples and wired it into the Portfolio Audit workflow.
+- Added a Senior Symfony review guide that explains architecture boundaries, trade-offs, operational evidence, and reviewer prompts.
+- Added PHPUnit coverage for the public next-due-question example.
+- Added a repeatable public showcase safety audit for env-file policy, obvious secret patterns, private-code path leakage, local links, screenshots, wording consistency, and PHPUnit XML parsing.
+- Added public live readiness evidence for the live demo's public routes and security headers.
+- Extended the Portfolio Audit workflow to run the showcase safety audit and lint PHP files in both `examples/` and `tests/`.
+
 ## 2026-05-26
 
 - Added interview demo script for SkillBuilder and the Shopware bridge.

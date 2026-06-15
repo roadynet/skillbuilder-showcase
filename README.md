@@ -140,6 +140,9 @@ Only published SkillBuilder lessons are synchronized as Shopware products. Draft
 - [Portfolio audit report](docs/audit-report-2026-05-23.md)
 - [PHPStan audit evidence](docs/phpstan-audit-2026-06-05.md)
 - [Evidence index](docs/evidence/README.md)
+- [Senior Symfony review guide](docs/senior-symfony-review.md)
+- [Security and privacy boundary](docs/security-privacy.md)
+- [Architecture decisions](docs/adr/)
 - [Demo script](docs/demo-script.md)
 - [Changelog](CHANGELOG.md)
 - [Demo checklist](docs/demo-checklist.md)
@@ -186,14 +189,16 @@ This repository does not include:
 Public showcase checks:
 
 ```bash
-phpunit
+composer install
+composer verify
+composer smoke:public
 ```
 
 Current public example test result:
 
 ```text
-4 tests
-7 assertions
+7 tests
+10 assertions
 OK
 ```
 
@@ -210,6 +215,8 @@ OK
 
 Additional checks performed:
 
+- public showcase safety audit for env-file policy, obvious secret patterns, private-code path leakage, local links, screenshots, and wording consistency
+- PHPStan `level: max` for public PHP examples
 - PHP syntax check across 180 files
 - Twig lint across 38 templates
 - YAML lint across 18 config files
@@ -219,6 +226,7 @@ Additional checks performed:
 - live smoke checks for public and protected routes
 - PHPStan audit setup added in the private codebase; baseline reduced from 56 findings to 17 Doctrine generated-ID findings
 - Evidence notes added for the PHPStan baseline reduction and private codebase verification limits
+- Public live readiness evidence added for 2026-06-15
 
 ## Portfolio Positioning
 

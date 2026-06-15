@@ -47,6 +47,8 @@ The service prefers:
 
 It also shows the concept of a mistake pool: questions with previous wrong answers stay visible until the user rebuilds enough correct streak.
 
+Tests for this example cover the reviewer-facing edge cases: section filtering, unanswered-first ordering, due-date ordering, stable id fallback, and unresolved mistake counting.
+
 ## Security Boundary
 
 File: `examples/security/RoleCheckExample.php`
@@ -58,6 +60,7 @@ The private app uses Symfony Security, route access rules, CSRF protection, and 
 Files:
 
 - `examples/tests/LearningSchedulerExampleTest.php`
+- `examples/tests/NextDueQuestionServiceExampleTest.php`
 - `examples/tests/SectionCodeServiceExampleTest.php`
 
 The tests show how business rules can be verified without a browser or database. This is the same testing style used for the private project's core learning behavior.
@@ -65,4 +68,3 @@ The tests show how business rules can be verified without a browser or database.
 ## What These Examples Are Not
 
 These files are not a copy of the private production repository. They are compact, publishable examples designed for portfolio review and technical interviews.
-

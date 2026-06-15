@@ -5,14 +5,43 @@
 Public showcase examples:
 
 ```text
-phpunit
+composer verify
 
-4 tests
-7 assertions
+7 tests
+10 assertions
 OK
 ```
 
 The public tests cover representative examples for learning scheduling and section-code parsing.
+
+Public showcase safety audit:
+
+```text
+python tests/showcase_audit.py
+
+private application paths are not tracked
+environment file policy is valid
+obvious secret patterns are absent
+local Markdown links and screenshots are valid
+public wording is consistent
+phpunit.xml is valid XML
+```
+
+Public PHPStan check:
+
+```text
+composer analyse
+
+[OK] No errors
+```
+
+Public live smoke check:
+
+```text
+composer smoke:public
+
+/health, /login, /register, /impressum, /dsgvo: 200 with security headers
+```
 
 Current private test suite:
 
@@ -64,12 +93,23 @@ Performed checks:
 - Symfony container lint
 - Doctrine mapping validation
 - live smoke checks against production routes
+- public showcase safety audit for secrets, private-code leaks, local links, screenshots, and wording consistency
+- PHPStan `level: max` for public PHP examples
 
 Detailed evidence:
 
 - [Evidence index](evidence/README.md)
 - [PHPStan baseline reduction evidence](evidence/phpstan-baseline-reduction-2026-06-05.md)
 - [Private codebase verification notes](evidence/private-codebase-verification-2026-06-05.md)
+- [Public live readiness evidence](evidence/public-live-readiness-2026-06-15.md)
+
+Related senior review context:
+
+- [Senior Symfony review guide](senior-symfony-review.md)
+- [Security and privacy boundary](security-privacy.md)
+- [ADR 0001: public/private repository split](adr/0001-public-private-repository-split.md)
+- [ADR 0002: Composer verify for public showcase checks](adr/0002-composer-verify-for-public-showcase.md)
+- [ADR 0003: Shopware sync boundary](adr/0003-shopware-sync-boundary.md)
 
 ## Important Finding Fixed
 

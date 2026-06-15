@@ -68,11 +68,25 @@ SkillBuilder documents ongoing hands-on PHP/Symfony work after the IHK qualifica
 - migration hygiene checks
 - PHPUnit tests and Symfony lint checks
 
+## Senior Engineering Signals
+
+SkillBuilder is meant to be reviewed as a maintained business application rather than as a coding exercise.
+
+The stronger signals are:
+
+- explicit separation between HTTP controllers, domain services, persistence, and external API integration
+- testable learning rules that can be verified without browser state
+- idempotent Shopware synchronization based on stable product numbers
+- private configuration kept outside the repository tree
+- privacy workflows treated as auditable operational paths
+- evidence documents that record both successful checks and environment limitations
+- public showcase safety checks that prevent accidental publication of private files or credentials
+
 ## Quality Results
 
 ```text
-14 PHPUnit tests
-650 assertions
+Private suite: 14 PHPUnit tests, 650 assertions
+Public showcase: 7 PHPUnit tests, 10 assertions
 PHP lint: 180 files
 Twig lint: 38 templates
 YAML lint: 18 config files

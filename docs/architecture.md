@@ -41,6 +41,29 @@ Representative service responsibilities:
 - export user data with the correct request owner
 - log sensitive GDPR access
 
+## Review Notes For Senior Symfony Readers
+
+The important design boundary is that controllers do not own learning policy. They collect HTTP input, enforce route-level concerns, and hand off to services that can be tested without a browser session or database fixture.
+
+The private application uses Doctrine for persistence, but the public examples intentionally keep core policies in plain PHP. That makes the business rules easy to inspect:
+
+- scheduling changes are expressed as state transitions
+- due-question selection has deterministic ordering
+- section-code parsing normalizes imported filenames before they become navigation or filtering keys
+- security examples describe the authorization boundary instead of hiding it inside UI behavior
+
+The expected Symfony shape is:
+
+```text
+Route / Controller / Form / CSRF
+-> Security role or voter decision
+-> Domain service
+-> Doctrine repository or external API client
+-> Twig or redirect response
+```
+
+This keeps production behavior explainable when debugging cache, wiring, permission, or deployment issues.
+
 ## Shopware Demo Bridge
 
 The portfolio demo includes an admin-only integration path:
@@ -81,3 +104,6 @@ The private application uses:
 - explicit admin-only routes
 - access checks before sensitive workflows
 - safe GDPR export ownership
+- server-side external API credentials
+- security headers on live public routes
+- public/private repository separation for portfolio safety
