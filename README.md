@@ -23,6 +23,7 @@ Connected Shopware demo: [roadynet/shopware-demo-shop](https://github.com/roadyn
 | Welches Produktproblem wird gelöst? | Lernplattform mit Rollen, Übungen, Fortschritt, Statistik, DSGVO-Export |
 | Wo liegt der Senior-Nachweis? | Service-orientiertes Symfony-Backend, Datenschutz, Tests, Betrieb, Shopware-Bridge |
 | Welche Praxis ist belegbar? | [Production Operations Evidence](docs/evidence/production-operations-evidence-2026-07-01.md) |
+| Wie wird Betrieb dokumentiert? | [OPERATIONS.md](OPERATIONS.md) |
 | Was ist bewusst geschützt? | keine Produktionsquellen, keine Kundendaten, keine Secrets |
 | Wie wird Commerce angebunden? | veröffentlichte Lessons werden serverseitig als Shopware-Produkte synchronisiert |
 
@@ -121,6 +122,7 @@ Zusätzlich dokumentiert:
 - [Recruiter project summary](docs/project-summary-for-recruiters.md)
 - [Evidence index](docs/evidence/README.md)
 - [Production operations evidence](docs/evidence/production-operations-evidence-2026-07-01.md)
+- [Operations runbook](OPERATIONS.md)
 - [Demo script](docs/demo-script.md)
 - [Shopware bridge](docs/shopware-bridge.md)
 - [Representative examples](examples/)
