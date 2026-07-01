@@ -8,6 +8,7 @@ The private repository is not published here. Evidence files summarize relevant 
 
 - [PHPStan baseline reduction](phpstan-baseline-reduction-2026-06-05.md)
 - [Private codebase verification notes](private-codebase-verification-2026-06-05.md)
+- [Production operations evidence](production-operations-evidence-2026-07-01.md)
 
 ## Interpretation
 
