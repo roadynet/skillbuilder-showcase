@@ -21,7 +21,12 @@ jobs:
         with:
           php-version: '8.4'
           coverage: none
-          tools: phpunit:11.5
+
+      - name: Validate Composer files
+        run: composer validate --no-check-publish --no-check-all
+
+      - name: Install dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
 
       - name: Check PHP example syntax
         shell: bash
@@ -31,8 +36,11 @@ jobs:
             php -l "$file"
           done < <(find examples -name '*.php' -type f | sort)
 
+      - name: Run PHPStan
+        run: vendor/bin/phpstan analyse --memory-limit=1G
+
       - name: Run public PHPUnit examples
-        run: phpunit
+        run: vendor/bin/phpunit
 
       - name: Check local Markdown links
         shell: python
