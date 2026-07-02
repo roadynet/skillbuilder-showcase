@@ -8,6 +8,14 @@ Live demo: `https://sb.mcmonaco.de`
 
 Connected Shopware demo: [roadynet/shopware-demo-shop](https://github.com/roadynet/shopware-demo-shop)
 
+## Audit & Evidence
+
+- [Portfolio Audit Report](docs/audit-report-2026-05-23.md)
+- [Quality Report](docs/quality-report.md)
+- [Evidence Index](docs/evidence/README.md)
+- [Production Operations Evidence](docs/evidence/production-operations-evidence-2026-07-01.md)
+- [Operations Runbook](OPERATIONS.md)
+
 ## Auf einen Blick
 
 - **Was ist es?** Eine Symfony-Lernplattform mit Lessons, Fragen, Fortschritt, Lernstatistik, Admin-Workflows und Shopware-Sync.
