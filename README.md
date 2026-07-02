@@ -12,10 +12,11 @@ Connected Shopware demo: [roadynet/shopware-demo-shop](https://github.com/roadyn
 
 1. **Live-Demo:** `https://sb.mcmonaco.de`
 2. **Portfolio map:** [PORTFOLIO.md](PORTFOLIO.md)
-3. **Produktbild:** Lernplattform mit Rollen, Uebungen, Fortschritt, Admin-Workflows und Shopware-Sync.
-4. **Architektur:** [docs/architecture.md](docs/architecture.md)
-5. **Bester Codepfad:** [Representative examples](examples/) mit Lernlogik, Sectionscode und Role Checks
-6. **Qualitaet:** [Quality Report](docs/quality-report.md), Public PHPUnit, Public PHPStan und private Production Evidence
+3. **Application links:** [docs/application-link-map.md](docs/application-link-map.md)
+4. **Produktbild:** Lernplattform mit Rollen, Uebungen, Fortschritt, Admin-Workflows und Shopware-Sync.
+5. **Architektur:** [docs/architecture.md](docs/architecture.md)
+6. **Bester Codepfad:** [Representative examples](examples/) mit Lernlogik, Sectionscode und Role Checks
+7. **Qualitaet:** [Quality Report](docs/quality-report.md), Public PHPUnit, Public PHPStan und private Production Evidence
 
 ## Produktpositionierung
 

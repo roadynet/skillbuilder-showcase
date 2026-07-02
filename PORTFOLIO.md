@@ -4,6 +4,8 @@ This portfolio is strongest when it is read as product work, not as a documentat
 
 ## Quick read
 
+For applications and recruiter messages, use the [Application Link Map](docs/application-link-map.md).
+
 | Project | Product signal | Start here |
 | --- | --- | --- |
 | [SkillBuilder Showcase](https://github.com/roadynet/skillbuilder-showcase) | Private Symfony learning platform, public evidence, GDPR-aware flows and Shopware bridge | [Live demo](https://sb.mcmonaco.de) · [Architecture](docs/architecture.md) · [Examples](examples/) |
