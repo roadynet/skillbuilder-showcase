@@ -8,6 +8,19 @@ Live demo: `https://sb.mcmonaco.de`
 
 Connected Shopware demo: [roadynet/shopware-demo-shop](https://github.com/roadynet/shopware-demo-shop)
 
+## Best place to start
+
+1. **Live-Demo:** `https://sb.mcmonaco.de`
+2. **Portfolio map:** [PORTFOLIO.md](PORTFOLIO.md)
+3. **Produktbild:** Lernplattform mit Rollen, Uebungen, Fortschritt, Admin-Workflows und Shopware-Sync.
+4. **Architektur:** [docs/architecture.md](docs/architecture.md)
+5. **Bester Codepfad:** [Representative examples](examples/) mit Lernlogik, Sectionscode und Role Checks
+6. **Qualitaet:** [Quality Report](docs/quality-report.md), Public PHPUnit, Public PHPStan und private Production Evidence
+
+## Produktpositionierung
+
+SkillBuilder wird hier als Produkt praesentiert, nicht als Aktenordner: erst das geloeste Lernplattform-Problem, dann Live-Demo und Screenshots, danach Architektur, Quality Gates und Evidence. Die private Produktionslogik bleibt geschuetzt, aber die oeffentliche Showcase-Schicht zeigt genug, um echte Symfony-/Shopware-Entwicklungsarbeit nachvollziehbar zu machen.
+
 ## Audit & Evidence
 
 - [Portfolio Audit Report](docs/audit-report-2026-05-23.md)
