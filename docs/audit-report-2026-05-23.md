@@ -53,6 +53,6 @@ The Shopware integration is documented as a real Admin API bridge, while sensiti
 
 ## Follow-Up Ideas
 
-- Add GitHub Actions for syntax/link checks.
+- Keep GitHub Actions green after documentation and evidence updates.
 - Add a short demo video or GIF for recruiters.
 - Add a changelog section for visible project progress.
