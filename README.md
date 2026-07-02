@@ -16,6 +16,15 @@ Connected Shopware demo: [roadynet/shopware-demo-shop](https://github.com/roadyn
 - [Production Operations Evidence](docs/evidence/production-operations-evidence-2026-07-01.md)
 - [Operations Runbook](OPERATIONS.md)
 
+## Tests & Quality Gates
+
+[![Public PHPUnit + Portfolio Audit](https://img.shields.io/github/actions/workflow/status/roadynet/skillbuilder-showcase/portfolio-audit.yml?branch=main&label=Public%20PHPUnit%20%2B%20Portfolio%20Audit)](https://github.com/roadynet/skillbuilder-showcase/actions/workflows/portfolio-audit.yml)
+
+- **Public PHPUnit:** Beispieltests für Lernlogik und Sectionscode laufen im öffentlichen Portfolio-Workflow.
+- **Private PHPUnit Evidence:** 14 Tests / 650 Assertions sind als private Produktions-Evidence dokumentiert.
+- **Private PHPStan Evidence:** Baseline wurde von 56 auf 17 Findings reduziert und mit Audit-Notizen belegt.
+- **Portfolio-Schutz:** Syntaxcheck, Markdown-Linkcheck, Env-Policy, Secret-Pattern-Scan und Wording-Check laufen bei jedem Push.
+
 ## Auf einen Blick
 
 - **Was ist es?** Eine Symfony-Lernplattform mit Lessons, Fragen, Fortschritt, Lernstatistik, Admin-Workflows und Shopware-Sync.

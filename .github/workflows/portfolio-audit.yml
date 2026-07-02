@@ -9,7 +9,7 @@ on:
 
 jobs:
   audit:
-    name: Documentation and example checks
+    name: Public PHPUnit and portfolio quality gates
     runs-on: ubuntu-latest
 
     steps:
