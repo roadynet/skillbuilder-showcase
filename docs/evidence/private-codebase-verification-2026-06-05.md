@@ -55,6 +55,13 @@ The public showcase examples remain:
 OK
 ```
 
+The public showcase repository now also runs PHPStan level 3 through Composer:
+
+```text
+vendor/bin/phpstan analyse --memory-limit=1G
+OK
+```
+
 ## Environment Note
 
 The local Windows/P-drive environment required a PHPStan wrapper script that copies the PHPStan PHAR to `%TEMP%` before execution. This avoids local PHAR execution hangs from the network-mounted project path.

@@ -5,7 +5,7 @@
 Public showcase examples:
 
 ```text
-phpunit
+vendor/bin/phpunit
 
 4 tests
 7 assertions
@@ -13,6 +13,15 @@ OK
 ```
 
 The public tests cover representative examples for learning scheduling and section-code parsing.
+
+Public static analysis:
+
+```text
+vendor/bin/phpstan analyse --memory-limit=1G
+
+PHPStan Level 3
+OK
+```
 
 Current private test suite:
 
@@ -57,6 +66,7 @@ Tests verify:
 Performed checks:
 
 - Composer validation
+- PHPStan Level 3 for public examples
 - PHP syntax check across 180 files
 - Twig lint across 38 templates
 - YAML lint across 18 config files

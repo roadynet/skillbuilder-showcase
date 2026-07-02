@@ -21,6 +21,7 @@ Connected Shopware demo: [roadynet/shopware-demo-shop](https://github.com/roadyn
 [![Public PHPUnit + Portfolio Audit](https://img.shields.io/github/actions/workflow/status/roadynet/skillbuilder-showcase/portfolio-audit.yml?branch=main&label=Public%20PHPUnit%20%2B%20Portfolio%20Audit)](https://github.com/roadynet/skillbuilder-showcase/actions/workflows/portfolio-audit.yml)
 
 - **Public PHPUnit:** Beispieltests für Lernlogik und Sectionscode laufen im öffentlichen Portfolio-Workflow.
+- **Public PHPStan:** Level 3 läuft im Showcase-Repo über Composer und GitHub Actions.
 - **Private PHPUnit Evidence:** 14 Tests / 650 Assertions sind als private Produktions-Evidence dokumentiert.
 - **Private PHPStan Evidence:** Baseline wurde von 56 auf 17 Findings reduziert und mit Audit-Notizen belegt.
 - **Portfolio-Schutz:** Syntaxcheck, Markdown-Linkcheck, Env-Policy, Secret-Pattern-Scan und Wording-Check laufen bei jedem Push.
@@ -105,6 +106,7 @@ Public showcase checks:
 
 ```text
 4 tests / 7 assertions / OK
+PHPStan Level 3 / OK
 ```
 
 Private codebase evidence:

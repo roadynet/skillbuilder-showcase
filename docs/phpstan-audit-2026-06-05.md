@@ -1,6 +1,21 @@
 # PHPStan Audit - 2026-06-05
 
-This audit documents the current static-analysis setup and cleanup state from the private SkillBuilder application.
+This audit documents the static-analysis setup for the public showcase and the
+cleanup state from the private SkillBuilder application.
+
+## Public Showcase Setup
+
+The public showcase now has its own Composer-based PHPStan gate:
+
+```text
+composer.json
+composer.lock
+phpstan.neon
+vendor/bin/phpstan analyse --memory-limit=1G
+```
+
+The public `portfolio-audit.yml` workflow installs dependencies and runs
+PHPStan level 3 before PHPUnit.
 
 ## Scope
 
@@ -83,6 +98,7 @@ The full private-codebase PHPStan run is wired through the `Testing` workflow. T
 
 This audit turns PHPStan from a one-off scan into repeatable project evidence:
 
+- static analysis is now part of the public showcase CI
 - static analysis is now part of the private repository setup
 - real PHPStan findings were fixed rather than hidden
 - the baseline is narrow and explainable
