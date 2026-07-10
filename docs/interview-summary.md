@@ -2,7 +2,7 @@
 
 ## Short Version
 
-I build and maintain SkillBuilder, a Symfony-based learning platform with role-based admin workflows, adaptive learning logic, learning statistics, GDPR data export, deployment, automated tests, and a real Shopware Admin API integration.
+I build and maintain SkillBuilder, a Symfony-based learning platform with role-based admin workflows, adaptive learning logic, a learning profile flow, learning statistics, GDPR data export, deployment, automated tests, and a real Shopware Admin API integration.
 
 My focus is PHP/Symfony backend development for business applications: clean service logic, Doctrine data modeling, Twig-based admin/user interfaces, deployment, debugging, SQL work, and API-driven process automation.
 
@@ -17,8 +17,10 @@ The project shows backend development, product thinking, UI improvement, securit
 - Symfony 8 and PHP 8.4 application architecture
 - Doctrine ORM domain model
 - service-layer learning logic
+- learning profile scoring and personalized recommendation rules
 - adaptive scheduling using stages, streaks, due dates, and strict mode
 - admin question editing with progress awareness
+- login throttling and runtime security guard coverage
 - GDPR export workflow
 - Shopware Admin API synchronization for published lessons
 - stable product mapping across two systems

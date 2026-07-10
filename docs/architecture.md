@@ -10,6 +10,8 @@ flowchart TD
     Controller --> Security["Security / Voters / Roles"]
     Controller --> Services["Domain Services"]
     Services --> Scheduler["Learning Scheduler"]
+    Services --> Profile["Learning Profile Calculator"]
+    Profile --> Recommendations["Recommendation Rules"]
     Services --> Stats["Statistics Builder"]
     Services --> Imports["Import Workflows"]
     Services --> Shopware["Shopware API Bridge"]
@@ -27,6 +29,8 @@ flowchart TD
 - `CourseQuestionOption`: answer option for multiple choice
 - `CourseQuestionProgress`: user-specific learning state
 - `UserLearningSettings`: rhythm and scheduling preferences
+- `LearningProfile`: profile result for learning type, pace, repetition need, and task preference
+- `LearningTypeQuestion` / `LearningTypeAnswer`: questionnaire data for the profile flow
 - `GdprExportRequest`: user data export request
 
 ## Service Layer
@@ -34,6 +38,8 @@ flowchart TD
 Representative service responsibilities:
 
 - schedule the next review after an answer
+- calculate learning profiles from weighted questionnaire answers
+- turn profile results into lesson recommendations and learning settings
 - select due questions
 - calculate progress and stability
 - import structured content
@@ -80,4 +86,6 @@ The private application uses:
 - role-based access for users, teachers, and admins
 - explicit admin-only routes
 - access checks before sensitive workflows
+- login throttling for repeated failed authentication attempts
+- runtime host/header guard coverage
 - safe GDPR export ownership

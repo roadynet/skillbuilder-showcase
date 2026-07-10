@@ -27,9 +27,11 @@ SkillBuilder connects lessons, questions, progress, learning settings, and admin
 Main capabilities:
 
 - structured lessons with section-aware navigation
+- learning profile test with personalized recommendations
 - adaptive question scheduling
 - mistake-review flow
 - personal learning settings
+- lesson hints based on learning type, pace, repetition need, and preferred task format
 - progress and learning statistics
 - admin question editing
 - Shopware Admin API bridge for synchronizing published lessons into Shopware products
@@ -44,6 +46,8 @@ I worked across product, backend, UI, testing, security, and deployment:
 - designed and refined user/admin workflows
 - implemented Symfony controllers, services, entities, and templates
 - improved role and permission boundaries
+- added login throttling and runtime security guard coverage
+- built the learning profile questionnaire, scoring service, recommendations, and tests
 - removed legacy chapter-limit behavior
 - polished dashboard, statistics, and settings UI
 - added PHPUnit coverage for core learning rules
@@ -59,8 +63,10 @@ SkillBuilder documents ongoing hands-on PHP/Symfony work after the IHK qualifica
 - Symfony 8 application with service-layer domain logic
 - Doctrine ORM entities and migrations
 - adaptive learning scheduler with stages, streaks, and due dates
+- learning profile calculator with recommendation rules for lesson flow
 - Twig UI with reusable design patterns
 - role-aware admin/user navigation
+- login throttling and security header/runtime guard tests
 - secure GDPR export context
 - API-based Shopware integration that maps published lessons to products
 - explicit Shopware mapping: lessons become products, chapters stay inside SkillBuilder and are not synchronized as categories

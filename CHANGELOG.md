@@ -1,5 +1,11 @@
 # Changelog
 
+## 2026-07-10
+
+- Added public learning profile example and PHPUnit coverage.
+- Updated showcase documentation for the new learning profile, recommendation flow, and lesson hints.
+- Documented recent security hardening around login throttling and runtime guard coverage.
+
 ## 2026-05-26
 
 - Added interview demo script for SkillBuilder and the Shopware bridge.

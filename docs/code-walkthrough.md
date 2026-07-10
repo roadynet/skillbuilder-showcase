@@ -47,17 +47,33 @@ The service prefers:
 
 It also shows the concept of a mistake pool: questions with previous wrong answers stay visible until the user rebuilds enough correct streak.
 
+## Learning Profile
+
+File: `examples/learning-profile/LearningProfileExample.php`
+
+The new learning profile flow turns a short preference test into learning settings and lesson recommendations.
+
+The public example shows:
+
+- weighted answers for learning type, speed, repetition level, and preferred task type
+- mixed-profile fallback when two dimensions are close
+- recommendation rules for question limits, review questions, and extra tasks
+- a service shape that is testable without controllers, sessions, or database fixtures
+
+In the private app, this logic is connected to Doctrine entities, a Twig questionnaire, saved user profile data, and lesson UI hints.
+
 ## Security Boundary
 
 File: `examples/security/RoleCheckExample.php`
 
-The private app uses Symfony Security, route access rules, CSRF protection, and admin-only workflows. The public example is deliberately simple, but it captures the rule: sensitive actions need explicit authorization and resource context.
+The private app uses Symfony Security, route access rules, CSRF protection, login throttling, runtime host guards, and admin-only workflows. The public example is deliberately simple, but it captures the rule: sensitive actions need explicit authorization and resource context.
 
 ## Tests
 
 Files:
 
 - `examples/tests/LearningSchedulerExampleTest.php`
+- `examples/tests/LearningProfileExampleTest.php`
 - `examples/tests/SectionCodeServiceExampleTest.php`
 
 The tests show how business rules can be verified without a browser or database. This is the same testing style used for the private project's core learning behavior.

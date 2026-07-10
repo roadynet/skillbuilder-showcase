@@ -11,6 +11,7 @@ SkillBuilder is a Symfony-based learning platform with a real Shopware Admin API
 - Twig-based user and admin interfaces
 - role-based access control
 - service-layer architecture
+- learning profile scoring and personalized recommendations
 - learning progress and scheduling logic
 - GDPR-oriented export workflows
 - deployment and live operation
@@ -19,6 +20,8 @@ SkillBuilder is a Symfony-based learning platform with a real Shopware Admin API
 ## My Technical Contribution
 
 I designed and implemented the SkillBuilder platform as a practical backend project. The work includes domain modeling, controllers, services, templates, database work, tests, debugging, deployment, and the Shopware integration workflow.
+
+Recent feature work adds a learning profile questionnaire. The app scores user answers across learning type, pace, repetition need, and preferred task format, then turns the result into lesson recommendations and learning settings.
 
 The Shopware bridge is implemented as an admin-only workflow:
 
@@ -66,6 +69,7 @@ Shopware Admin API credentials are used only by the Symfony backend. They are no
 ## Interview Talking Points
 
 - why published lessons are the source of truth
+- how the learning profile flow maps answers to recommendations
 - how the admin-triggered synchronization works
 - how repeated imports avoid duplicate products
 - how unpublished content is removed from storefront visibility

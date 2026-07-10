@@ -2,7 +2,7 @@
 
 [![Portfolio Audit](https://github.com/roadynet/skillbuilder-showcase/actions/workflows/portfolio-audit.yml/badge.svg)](https://github.com/roadynet/skillbuilder-showcase/actions/workflows/portfolio-audit.yml)
 
-Public portfolio evidence for **SkillBuilder**, a private Symfony learning platform with role-based workflows, learning logic, GDPR-oriented features, tests, deployment evidence, and a real Shopware Admin API bridge.
+Public portfolio evidence for **SkillBuilder**, a private Symfony learning platform with role-based workflows, learning profile recommendations, adaptive learning logic, GDPR-oriented features, tests, deployment evidence, and a real Shopware Admin API bridge.
 
 Live demo: `https://sb.mcmonaco.de`
 
@@ -42,7 +42,7 @@ SkillBuilder wird hier als Produkt praesentiert, nicht als Aktenordner: erst das
 
 ## Auf einen Blick
 
-- **Was ist es?** Eine Symfony-Lernplattform mit Lessons, Fragen, Fortschritt, Lernstatistik, Admin-Workflows und Shopware-Sync.
+- **Was ist es?** Eine Symfony-Lernplattform mit Lessons, Fragen, Lernprofil, Fortschritt, Lernstatistik, Admin-Workflows und Shopware-Sync.
 - **Tech-Stack:** PHP 8.4, Symfony, Doctrine, Twig, MariaDB, PHPUnit, GitHub Actions.
 - **Warum interessant?** Das Projekt zeigt Produktentwicklung, Backend-Architektur, DSGVO-nahe Datenflüsse und E-Commerce-Integration in einem real betriebenen System.
 - **Öffentlich hier:** Case Study, Screenshots, Architekturhinweise, Test-/Audit-Evidence und kleine anonymisierte Beispiele.
@@ -75,6 +75,12 @@ Lernflow:
 Lesson lesen -> Fragen üben -> Fehler wiederholen -> Fortschritt auswerten
 ```
 
+Personalisierung:
+
+```text
+Antworten -> Lernprofil -> Empfehlungen -> Lesson-Hinweise und Lernsettings
+```
+
 Shopware-Bridge:
 
 ```text
@@ -91,9 +97,12 @@ private app: user data + production source + secrets
 ## Was gebaut wurde
 
 - role-based Login für Nutzer, Lehrer und Admins
+- Login-Throttling und Security-Hardening für sensible Routen
 - Lesson-Dashboard mit Onboarding
+- Lernprofil-Test mit personalisierten Empfehlungen
 - Lese-, Test- und Fehlerwiederholungsflows
 - adaptive Lernlogik und Lernstatistik
+- Section-Navigation mit nächster/vorheriger Section und Lernprofil-Hinweisen
 - Admin-Fragenpflege
 - GDPR-/DSGVO-orientierter Datenexport
 - Shopware Admin API Bridge für veröffentlichte Lessons
@@ -119,7 +128,7 @@ private app: user data + production source + secrets
 Public showcase checks:
 
 ```text
-4 tests / 7 assertions / OK
+7 tests / 15 assertions / OK
 PHPStan Level 3 / OK
 ```
 

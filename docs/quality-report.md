@@ -7,12 +7,12 @@ Public showcase examples:
 ```text
 vendor/bin/phpunit
 
-4 tests
-7 assertions
+7 tests
+15 assertions
 OK
 ```
 
-The public tests cover representative examples for learning scheduling and section-code parsing.
+The public tests cover representative examples for learning scheduling, learning profile scoring, and section-code parsing.
 
 Public static analysis:
 
@@ -53,6 +53,14 @@ Tests verify core learning behavior:
 - strict mode resets a question to stage 1
 - correct long-term streaks promote stages
 - wrong long-term answers step back and schedule a short review
+
+### Learning Profile
+
+Tests verify the public version of the new profile flow:
+
+- dominant learning types are detected
+- close scores fall back to `mixed`
+- speed and repetition results influence recommendation flags
 
 ### Migration Hygiene
 
