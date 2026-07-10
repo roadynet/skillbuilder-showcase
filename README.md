@@ -47,6 +47,7 @@ SkillBuilder wird hier als Produkt praesentiert, nicht als Aktenordner: erst das
 - **Warum interessant?** Das Projekt zeigt Produktentwicklung, Backend-Architektur, DSGVO-nahe Datenflüsse und E-Commerce-Integration in einem real betriebenen System.
 - **Öffentlich hier:** Case Study, Screenshots, Architekturhinweise, Test-/Audit-Evidence und kleine anonymisierte Beispiele.
 - **Nicht öffentlich:** private Produktionslogik, Userdaten, Deployment-Skripte, Zugangsdaten, generierte Uploads.
+- **Architektur:** bewusst abstrakte Use-Case- und Systemdiagramme, keine vollständige interne Klassendokumentation.
 
 ## Senior-Level Review-Pfad
 

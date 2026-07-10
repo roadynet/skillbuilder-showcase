@@ -2,44 +2,66 @@
 
 SkillBuilder follows a backend-driven Symfony architecture. Controllers handle HTTP concerns, while domain decisions live in services.
 
+This public overview is intentionally abstract. The private codebase, exact entity fields, production configuration, security internals, deployment details, credentials, and user data are not published.
+
+## Public Use-Case View
+
 ```mermaid
-flowchart TD
-    User["Learner"] --> UI["Twig UI"]
-    Admin["Admin"] --> UI
-    UI --> Controller["Symfony Controllers"]
-    Controller --> Security["Security / Voters / Roles"]
-    Controller --> Services["Domain Services"]
-    Services --> Scheduler["Learning Scheduler"]
-    Services --> Profile["Learning Profile Calculator"]
-    Profile --> Recommendations["Recommendation Rules"]
-    Services --> Stats["Statistics Builder"]
-    Services --> Imports["Import Workflows"]
-    Services --> Shopware["Shopware API Bridge"]
-    Services --> GDPR["GDPR Export Flow"]
-    Services --> Doctrine["Doctrine ORM"]
-    Shopware --> Storefront["Shopware Storefront"]
-    Doctrine --> DB["MySQL / MariaDB"]
+flowchart LR
+    Learner["Learner"] --> Read["Read lessons"]
+    Learner --> Practice["Practice questions"]
+    Learner --> Profile["Create learning profile"]
+    Learner --> Progress["Review progress"]
+    Learner --> Export["Request data export"]
+
+    Teacher["Teacher"] --> Content["Manage learning content"]
+    Teacher --> Questions["Manage questions"]
+    Teacher --> Reports["Review learning statistics"]
+
+    Admin["Admin"] --> Users["Manage users and roles"]
+    Admin --> Sync["Trigger Shopware demo sync"]
+    Admin --> Ops["Review operational status"]
+
+    Sync --> Storefront["Shopware demo storefront"]
 ```
 
-## Key Domains
+## Public System View
 
-- `Lesson`: top-level learning unit
-- `LessonSection`: structured content section
-- `CourseQuestion`: question assigned to a lesson or section
-- `CourseQuestionOption`: answer option for multiple choice
-- `CourseQuestionProgress`: user-specific learning state
-- `UserLearningSettings`: rhythm and scheduling preferences
-- `LearningProfile`: profile result for learning type, pace, repetition need, and task preference
-- `LearningTypeQuestion` / `LearningTypeAnswer`: questionnaire data for the profile flow
-- `GdprExportRequest`: user data export request
+```mermaid
+flowchart TD
+    User["Learner / Teacher / Admin"] --> UI["Twig UI"]
+    UI --> Controllers["Symfony controllers"]
+    Controllers --> Security["Authentication, roles, access checks"]
+    Controllers --> Services["Service layer"]
+
+    Services --> Learning["Learning logic"]
+    Services --> Profile["Profile and recommendations"]
+    Services --> Content["Content workflows"]
+    Services --> Reporting["Progress and statistics"]
+    Services --> Privacy["Privacy workflows"]
+    Services --> Commerce["Shopware demo bridge"]
+    Services --> Persistence["Persistence layer"]
+
+    Commerce --> Storefront["Shopware demo storefront"]
+    Persistence --> Database["Relational database"]
+```
+
+## Public Domain Areas
+
+- learning content and section navigation
+- questions, answers, scheduling, and repetition
+- learning profile and recommendation rules
+- user roles, admin workflows, and reporting
+- GDPR-oriented data export workflow
+- Shopware demo synchronization for published lessons
 
 ## Service Layer
 
 Representative service responsibilities:
 
 - schedule the next review after an answer
-- calculate learning profiles from weighted questionnaire answers
-- turn profile results into lesson recommendations and learning settings
+- calculate learning profiles from weighted questionnaire-style answers
+- turn profile results into recommendations and learning settings
 - select due questions
 - calculate progress and stability
 - import structured content

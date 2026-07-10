@@ -5,6 +5,7 @@
 - Added public learning profile example and PHPUnit coverage.
 - Updated showcase documentation for the new learning profile, recommendation flow, and lesson hints.
 - Added a public learning profile screenshot to the showcase.
+- Reworked the architecture page with abstract public use-case and system diagrams.
 - Documented recent security hardening around login throttling and runtime guard coverage.
 
 ## 2026-05-26
