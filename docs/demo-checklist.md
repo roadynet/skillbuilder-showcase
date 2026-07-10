@@ -9,7 +9,8 @@ Recommended screenshots:
 3. `screenshots/03-combined-learning.png`
 4. `screenshots/04-learning-statistics.png`
 5. `screenshots/05-learning-settings.png`
-6. `screenshots/06-admin-cockpit.png`
+6. `screenshots/07-learning-profile.png`
+7. `screenshots/06-admin-cockpit.png`
 
 Place screenshots in `screenshots/`.
 
@@ -29,12 +30,13 @@ Place screenshots in `screenshots/`.
 3. Open a lesson.
 4. Explain answering and scheduling.
 5. Show learning settings.
-6. Show learning statistics.
-7. Show admin question editing.
-8. Show the Shopware demo product import button.
-9. Explain the mapping: published lessons become products, chapters are not categories.
-10. Show the connected Shopware storefront as no-order/no-payment demo.
-11. Mention tests and quality checks.
+6. Show the learning profile test and recommendations.
+7. Show learning statistics.
+8. Show admin question editing.
+9. Show the Shopware demo product import button.
+10. Explain the mapping: published lessons become products, chapters are not categories.
+11. Show the connected Shopware storefront as no-order/no-payment demo.
+12. Mention tests and quality checks.
 
 ## Safety Notes
 

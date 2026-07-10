@@ -121,6 +121,8 @@ private app: user data + production source + secrets
 
 ![Learning settings](screenshots/05-learning-settings.png)
 
+![Learning profile test](screenshots/07-learning-profile.png)
+
 ![Admin cockpit with Shopware import](screenshots/06-admin-cockpit.png)
 
 ## Qualität und Evidence
