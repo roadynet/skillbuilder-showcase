@@ -9,5 +9,15 @@
     "require-dev": {
         "phpstan/phpstan": "^2.2",
         "phpunit/phpunit": "^11.5"
+    },
+    "scripts": {
+        "check:composer": "composer validate --strict",
+        "test": "phpunit --colors=always",
+        "stan": "phpstan analyse --memory-limit=512M",
+        "qa": [
+            "@check:composer",
+            "@test",
+            "@stan"
+        ]
     }
 }
